@@ -17,7 +17,8 @@ public class IncomeTaxController {
     }
 
     @GetMapping("/calc")
-    public Double calcTax(@RequestParam("income") int income, @RequestParam("taxRate") int taxRate) {
-        return taxService.getTax(new IncomeTaxDto(income, taxRate));
+    public Double calcTax(@RequestParam("income") int income, @RequestParam("taxRate") int taxRate,
+                          @RequestParam("fixed") int fixed) {
+        return taxService.getTax(new IncomeTaxDto(income, taxRate, fixed));
     }
 }

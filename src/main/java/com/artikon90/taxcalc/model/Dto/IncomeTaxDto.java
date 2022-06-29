@@ -10,4 +10,5 @@ import lombok.*;
 public class IncomeTaxDto {
     private int income;
     private int taxRate;
+    private int fixedPayment;
 }
